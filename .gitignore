@@ -11,6 +11,11 @@ content/*.local.json
 .env.*
 !.env.example
 
+# personal CV files dropped in the project root (contain private data)
+/*.pdf
+/*.docx
+/*.doc
+
 # test artefacts
 test-results/
 playwright-report/
