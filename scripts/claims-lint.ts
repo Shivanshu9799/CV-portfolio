@@ -23,7 +23,12 @@ const VERB_RE = /\b(led|leading|spearheaded|drove|directed|owned|saved|savings|r
 
 function visibleText(html: string): string {
   const head = [...html.matchAll(/<title>([\s\S]*?)<\/title>/g)].map((m) => m[1] ?? '');
-  const metas = [...html.matchAll(/<meta[^>]+(?:name|property)="(?:description|og:[a-z:]+|twitter:[a-z:]+)"[^>]+content="([^"]*)"/g)].map((m) => m[1] ?? '');
+  // Only text meta tags are copy. URLs and image sizes (og:url, og:image:width, ...) are not claims.
+  const metas = [
+    ...html.matchAll(
+      /<meta[^>]+(?:name|property)="(?:description|og:title|og:description|twitter:title|twitter:description)"[^>]+content="([^"]*)"/g,
+    ),
+  ].map((m) => m[1] ?? '');
   const body = html
     .replace(/<script[\s\S]*?<\/script>/g, ' ')
     .replace(/<style[\s\S]*?<\/style>/g, ' ')
