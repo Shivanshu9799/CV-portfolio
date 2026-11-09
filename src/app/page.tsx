@@ -9,7 +9,6 @@ import { Hero } from '@/components/Hero';
 import { LeadershipScope } from '@/components/LeadershipScope';
 import { OpenTo } from '@/components/OpenTo';
 import { ProjectCard } from '@/components/ProjectCard';
-import { QuickFacts } from '@/components/QuickFacts';
 import { ResultsBlock } from '@/components/ResultsBlock';
 import { ScaleChart } from '@/components/ScaleChart';
 import { Section } from '@/components/Section';
@@ -37,10 +36,28 @@ export default function Home() {
       <Hero
         name={c.identity.full_name}
         headline={c.identity.headline_default}
-        summary={c.executive_positioning.executive_summary_draft}
+        stats={[
+          { value: `${stats.years}+`, label: 'Years of experience' },
+          { value: String(all.length), label: 'Projects listed' },
+          { value: String(stats.states.length), label: 'States' },
+          { value: String(stats.clients.length), label: 'Clients' },
+        ]}
+        clients={stats.clients}
       />
-      <QuickFacts years={stats.years} employers={stats.employers} states={stats.states} clients={stats.clients.length} />
-      <OpenTo items={c.executive_positioning.open_to} />
+      <Section id="projects" title="Selected projects" intro="Roads and structures he has worked on. Each opens its own page.">
+        <ul className="grid list-none gap-6 p-0 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((p) => (
+            <li key={p.slug}>
+              <ProjectCard p={p} />
+            </li>
+          ))}
+        </ul>
+        <p className="mt-8">
+          <Link href="/projects/" className="btn btn-ghost">
+            See all projects
+          </Link>
+        </p>
+      </Section>
       <CareerLadder steps={steps} />
       <Section
         id="scale"
@@ -52,20 +69,7 @@ export default function Home() {
       <Section id="competencies" title="Core competencies">
         <CompetencyGrid groups={c.executive_positioning.core_competencies_grouped} />
       </Section>
-      <Section id="projects" title="Selected projects" intro="Projects he has worked on.">
-        <ul className="grid list-none gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((p) => (
-            <li key={p.slug}>
-              <ProjectCard p={p} />
-            </li>
-          ))}
-        </ul>
-        <p className="mt-6">
-          <Link href="/projects/" className="inline-flex min-h-[44px] items-center">
-            See all projects
-          </Link>
-        </p>
-      </Section>
+      <OpenTo items={c.executive_positioning.open_to} />
       <LeadershipScope scope={slots.leadership_scope} />
       <ResultsBlock results={slots.quantified_results} />
       <Awards awards={slots.awards} />
@@ -73,14 +77,21 @@ export default function Home() {
       <Section id="credentials" title="Credentials">
         <Credentials education={c.education} certifications={c.certifications} />
       </Section>
-      <Section id="contact-cta" title="Get in touch">
-        <p className="max-w-prose text-muted">For roles on highway and infrastructure projects.</p>
-        <p className="mt-4">
-          <Link href="/contact/" className="btn btn-primary">
-            Contact
-          </Link>
-        </p>
-      </Section>
+      <section aria-labelledby="contact-cta-title" className="band bleed mt-10">
+        <div className="wrap py-14 text-center sm:py-20">
+          <h2 id="contact-cta-title" className="text-3xl font-semibold sm:text-4xl">
+            Get in touch
+          </h2>
+          <p className="mx-auto mt-3 max-w-prose text-[rgb(var(--on-navy-muted))]">
+            For roles on highway and infrastructure projects.
+          </p>
+          <p className="mt-6">
+            <Link href="/contact/" className="btn btn-primary">
+              Contact
+            </Link>
+          </p>
+        </div>
+      </section>
     </>
   );
 }

@@ -12,13 +12,13 @@ type Props = {
 export function Section({ id, title, intro, children, as: H = 'h2' }: Props) {
   const headingId = id ? `${id}-title` : undefined;
   return (
-    <section id={id} aria-labelledby={headingId} className="py-10 sm:py-12">
-      <hr className="lane mb-6 w-24" aria-hidden="true" />
-      <H id={headingId} className="text-2xl font-semibold sm:text-3xl">
+    <section id={id} aria-labelledby={headingId} className="py-14 sm:py-20">
+      <hr className="lane mb-5 w-14" aria-hidden="true" />
+      <H id={headingId} className="text-3xl font-semibold sm:text-4xl">
         {title}
       </H>
-      {intro ? <p className="mt-2 max-w-prose text-muted">{intro}</p> : null}
-      <div className="mt-6">{children}</div>
+      {intro ? <p className="mt-3 max-w-prose text-lg text-muted">{intro}</p> : null}
+      <div className="mt-10">{children}</div>
     </section>
   );
 }

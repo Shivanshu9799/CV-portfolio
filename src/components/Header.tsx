@@ -4,16 +4,22 @@ import { ThemeToggle } from './ThemeToggle';
 
 export function Header({ name }: { name: string }) {
   return (
-    <header className="border-b border-line no-print">
-      <div className="wrap flex flex-wrap items-center justify-between gap-x-4 gap-y-1 py-2">
-        <Link href="/" className="font-serif text-lg font-semibold text-text no-underline">
+    <header className="band sticky top-0 z-40 border-b border-white/10 no-print">
+      <div className="wrap flex items-center justify-between gap-3 py-1.5">
+        <Link href="/" className="shrink-0 font-serif text-lg font-semibold no-underline">
           {name}
         </Link>
-        <nav aria-label="Primary" className="flex flex-wrap items-center gap-2">
+        <nav aria-label="Primary" className="flex min-w-0 items-center gap-1">
           <NavLinks />
+          <Link href="/contact/" className="btn btn-primary ml-1 shrink-0 px-4">
+            Contact
+          </Link>
           <ThemeToggle />
         </nav>
       </div>
+      <nav aria-label="Sections" className="wrap md:hidden">
+        <NavLinks mobile />
+      </nav>
     </header>
   );
 }

@@ -8,13 +8,16 @@ const LINKS = [
   { href: '/experience/', label: 'Experience' },
   { href: '/projects/', label: 'Projects' },
   { href: '/credentials/', label: 'Credentials' },
-  { href: '/contact/', label: 'Contact' },
 ];
 
-export function NavLinks() {
+export function NavLinks({ mobile = false }: { mobile?: boolean }) {
   const pathname = usePathname() ?? '/';
   return (
-    <ul className="flex flex-wrap items-center gap-x-1 gap-y-0 text-sm">
+    <ul
+      className={
+        mobile ? 'flex items-center gap-x-1 overflow-x-auto text-sm md:hidden' : 'hidden items-center gap-x-1 text-sm md:flex'
+      }
+    >
       {LINKS.map((l) => {
         const active = l.href === '/' ? pathname === '/' : pathname.startsWith(l.href);
         return (
@@ -23,7 +26,7 @@ export function NavLinks() {
               href={l.href}
               aria-current={active ? 'page' : undefined}
               className={`inline-flex min-h-[44px] items-center px-2 no-underline ${
-                active ? 'font-semibold text-text underline decoration-accent decoration-2 underline-offset-8' : 'text-muted hover:text-text'
+                active ? 'font-semibold underline decoration-accent decoration-2 underline-offset-8' : 'text-[rgb(var(--on-navy-muted))] hover:text-[rgb(var(--on-navy))]'
               }`}
             >
               {l.label}

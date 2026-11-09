@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 type Theme = 'light' | 'dark';
 
 function systemTheme(): Theme {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return 'light'; // navy and ivory is the designed default; dark is opt-in
 }
 
 export function ThemeToggle() {

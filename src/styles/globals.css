@@ -2,40 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design tokens (RGB triples so Tailwind alpha works). Light is the default. */
+/* Design tokens (RGB triples so Tailwind alpha works). Navy and gold, ivory page. */
 :root {
-  --bg: 255 255 255;
-  --surface: 244 246 250;
-  --text: 11 18 32;
-  --muted: 78 90 108;
-  --line: 214 220 230;
-  --accent: 242 179 61; /* road-marking amber: fills, rules, bars */
-  --accent-ink: 133 84 0; /* amber for text on light backgrounds */
-  --steel: 40 92 142;
+  --bg: 250 248 243; /* ivory */
+  --surface: 255 255 255;
+  --text: 14 27 51; /* ink navy */
+  --muted: 84 96 117;
+  --line: 222 217 205;
+  --accent: 201 162 77; /* gold: fills, rules */
+  --accent-ink: 122 92 27; /* dark gold for text on light */
+  --steel: 14 39 77; /* navy: links, headings accents */
+  --navy: 11 29 58; /* hero and header band */
+  --navy-2: 18 42 80;
+  --on-navy: 244 240 230;
+  --on-navy-muted: 178 188 205;
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    --bg: 11 18 32;
-    --surface: 17 27 47;
-    --text: 233 238 245;
-    --muted: 160 172 190;
-    --line: 38 51 76;
-    --accent: 242 179 61;
-    --accent-ink: 242 179 61;
-    --steel: 128 172 218;
-    color-scheme: dark;
-  }
-}
 :root[data-theme='dark'] {
-  --bg: 11 18 32;
-  --surface: 17 27 47;
-  --text: 233 238 245;
-  --muted: 160 172 190;
-  --line: 38 51 76;
-  --accent: 242 179 61;
-  --accent-ink: 242 179 61;
-  --steel: 128 172 218;
+  --bg: 8 18 37;
+  --surface: 14 29 56;
+  --text: 238 234 224;
+  --muted: 163 173 191;
+  --line: 38 54 86;
+  --accent: 212 175 90;
+  --accent-ink: 224 188 104;
+  --steel: 168 196 236;
+  --navy: 6 14 30;
+  --navy-2: 14 29 56;
   color-scheme: dark;
 }
 
@@ -80,13 +73,9 @@
     @apply mx-auto w-full max-w-page px-4 sm:px-6;
   }
   .lane {
-    height: 2px;
+    height: 3px;
     border: 0;
-    background-image: repeating-linear-gradient(
-      90deg,
-      rgb(var(--accent)) 0 14px,
-      transparent 14px 28px
-    );
+    background: rgb(var(--accent));
   }
   .chainage {
     @apply font-mono text-sm text-muted;
@@ -96,7 +85,7 @@
     @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded border px-4 py-2 text-sm font-semibold no-underline;
   }
   .btn-primary {
-    @apply border-accent bg-accent text-[#0B1220];
+    @apply border-accent bg-accent text-[#0B1D3A];
   }
   .btn-primary:hover {
     filter: brightness(0.95);
@@ -109,6 +98,30 @@
   }
   .card {
     @apply rounded-md border border-line bg-surface p-4 sm:p-5;
+  }
+  .band {
+    background: rgb(var(--navy));
+    color: rgb(var(--on-navy));
+  }
+  .band a {
+    color: inherit;
+  }
+  .band .btn-ghost {
+    border-color: rgb(var(--on-navy) / 0.45);
+    color: rgb(var(--on-navy));
+  }
+  .band .btn-ghost:hover {
+    background: rgb(var(--on-navy) / 0.1);
+  }
+  .band :focus-visible {
+    outline-color: rgb(var(--accent));
+  }
+  .eyebrow {
+    @apply font-sans text-xs font-semibold uppercase text-accent-ink;
+    letter-spacing: 0.16em;
+  }
+  .band .eyebrow {
+    color: rgb(var(--accent));
   }
   .fade-in {
     animation: fade-in 180ms ease-out both;
@@ -124,6 +137,15 @@
     opacity: 1;
     transform: none;
   }
+}
+
+/* full-width band inside the centred <main> */
+.bleed {
+  margin-inline: calc(50% - 50vw);
+  padding-inline: calc(50vw - 50%);
+}
+body {
+  overflow-x: clip;
 }
 
 .sr-only-focusable:not(:focus):not(:focus-within) {
