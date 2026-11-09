@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens (RGB triples so Tailwind alpha works). Light is the default. */
+:root {
+  --bg: 255 255 255;
+  --surface: 244 246 250;
+  --text: 11 18 32;
+  --muted: 78 90 108;
+  --line: 214 220 230;
+  --accent: 242 179 61; /* road-marking amber: fills, rules, bars */
+  --accent-ink: 133 84 0; /* amber for text on light backgrounds */
+  --steel: 40 92 142;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: 11 18 32;
+    --surface: 17 27 47;
+    --text: 233 238 245;
+    --muted: 160 172 190;
+    --line: 38 51 76;
+    --accent: 242 179 61;
+    --accent-ink: 242 179 61;
+    --steel: 128 172 218;
+    color-scheme: dark;
+  }
+}
+:root[data-theme='dark'] {
+  --bg: 11 18 32;
+  --surface: 17 27 47;
+  --text: 233 238 245;
+  --muted: 160 172 190;
+  --line: 38 51 76;
+  --accent: 242 179 61;
+  --accent-ink: 242 179 61;
+  --steel: 128 172 218;
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-text font-sans antialiased;
+    line-height: 1.6;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-serif;
+    line-height: 1.2;
+  }
+  a {
+    @apply text-steel underline underline-offset-2;
+  }
+  a:hover {
+    text-decoration-thickness: 2px;
+  }
+  :focus-visible {
+    outline: 3px solid rgb(var(--steel));
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-page px-4 sm:px-6;
+  }
+  .lane {
+    height: 2px;
+    border: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgb(var(--accent)) 0 14px,
+      transparent 14px 28px
+    );
+  }
+  .chainage {
+    @apply font-mono text-sm text-muted;
+    letter-spacing: 0.01em;
+  }
+  .btn {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded border px-4 py-2 text-sm font-semibold no-underline;
+  }
+  .btn-primary {
+    @apply border-accent bg-accent text-[#0B1220];
+  }
+  .btn-primary:hover {
+    filter: brightness(0.95);
+  }
+  .btn-ghost {
+    @apply border-line bg-transparent text-text;
+  }
+  .btn-ghost:hover {
+    @apply bg-surface;
+  }
+  .card {
+    @apply rounded-md border border-line bg-surface p-4 sm:p-5;
+  }
+  .fade-in {
+    animation: fade-in 180ms ease-out both;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Print: used by /cv and by the PDF script */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  a {
+    color: #000 !important;
+    text-decoration: none;
+  }
+}

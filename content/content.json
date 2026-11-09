@@ -1,0 +1,512 @@
+{
+  "identity": {
+    "full_name": "Gajendra Agrawal",
+    "base_location": "Kota, Rajasthan, India",
+    "career_start": "2001-01-01",
+    "headline_default": "Highway & Infrastructure Project Manager",
+    "headline_alternatives": [
+      "Project Manager | Highways, Flyovers & Urban Infrastructure",
+      "Senior Project Manager | EPC, BOT (Annuity) & Supervision Consultancy"
+    ]
+  },
+  "education": [
+    {
+      "id": "be-civil",
+      "qualification": "Graduate in Civil Engineering (First Division)",
+      "institution": "S.A.T.I. Vidisha (M.P.)",
+      "year": 2014,
+      "mode_of_study": null
+    },
+    {
+      "id": "diploma-civil",
+      "qualification": "Diploma in Civil Engineering (First Division)",
+      "institution": "Govt. Polytechnic College, Kota (Raj.)",
+      "year": 2000
+    }
+  ],
+  "certifications": [
+    {
+      "id": "road-safety-audit",
+      "title": "Road Safety Audit (15-day certification course)",
+      "issuer": "Indian Academy of Highway Engineers (IAHE), Noida",
+      "issuer_as_written_in_cv": "Indian Academic of Highway Engineers Noida (IAHE)",
+      "year": null,
+      "certificate_number": null
+    }
+  ],
+  "title_progression": {
+    "steps": [
+      {
+        "title": "Junior Engineer / Site Engineer",
+        "period": "2001 - 2006",
+        "employers": [
+          "Punj Lloyd",
+          "BCC Developers & Promoters",
+          "Nuclear Power Corporation of India"
+        ]
+      },
+      {
+        "title": "Sr. Engineer (section in charge)",
+        "period": "2006 - 2009",
+        "employers": [
+          "Punj Lloyd"
+        ]
+      },
+      {
+        "title": "Project Manager",
+        "period": "2009 - 2025",
+        "employers": [
+          "Raj Vilash Enterprises",
+          "Tomar Builders & Contractors",
+          "I-9 Freeways"
+        ]
+      },
+      {
+        "title": "Project Coordinator",
+        "period": "Nov 2025 - present",
+        "employers": [
+          "EKAM Venture"
+        ],
+        "confirmed": false
+      }
+    ]
+  },
+  "employment": [
+    {
+      "id": "ekam-venture",
+      "confirmed_in_original_cv": false,
+      "employer": "EKAM Venture Pvt Ltd",
+      "start": "2025-11-11",
+      "end": null,
+      "is_current": true,
+      "title": "Project Coordinator",
+      "location": "Mumbai, Thane (Maharashtra)",
+      "client": "Public Work Department & MMRDA",
+      "stated_project_value_text": "INR 840+260+200 Cr.",
+      "stated_value_cr_combined": 1300,
+      "projects": [
+        {
+          "id": "ekam-a-sh34-sh35",
+          "label": "A",
+          "name": "Improvement of Manor Wada Road (SH-34) from Km 29/550 to Km 53/800 and Wada Bhiwandi Road (SH-35) from Km 49/000 to Km 89/070, Tal. Bhiwandi, Dist. Thane",
+          "road_ids": [
+            "SH-34",
+            "SH-35"
+          ],
+          "chainage": [
+            "SH-34: Km 29/550 to Km 53/800",
+            "SH-35: Km 49/000 to Km 89/070"
+          ],
+          "district": "Thane",
+          "state": "Maharashtra"
+        },
+        {
+          "id": "ekam-b-msh04",
+          "label": "B",
+          "name": "Improvement of Chinchoti Kaman Mankoli Road (MSH04) Km 0/000 to Km 22/600, Dist. Thane",
+          "road_ids": [
+            "MSH-04"
+          ],
+          "chainage": [
+            "Km 0/000 to Km 22/600"
+          ],
+          "length_km": 22.6,
+          "district": "Thane",
+          "state": "Maharashtra",
+          "contract_mode": "EPC"
+        },
+        {
+          "id": "ekam-c-flyovers",
+          "label": "C",
+          "name": "Design and Construction of (1) Flyover and Underpass at Kalyan Phata junction on old NH-4, and (2) Flyover at Shil Phata junction on old NH-4, and Construction & Widening of DP Road",
+          "road_ids": [
+            "NH-4 (old)"
+          ],
+          "state": "Maharashtra",
+          "contract_mode": "Design and Construction",
+          "structure_types": [
+            "Flyover",
+            "Underpass",
+            "DP Road widening"
+          ]
+        }
+      ],
+      "responsibilities_verbatim": [
+        "Monitoring project planning, scheduling, financial performance, and quality assurance in accordance with the approved work programme.",
+        "Supervising site investigations, mobilization, and construction activities to ensure timely and efficient project execution.",
+        "Ensuring compliance with quality, safety, contractual, and technical requirements, including MoRTH/IRC standards.",
+        "Coordinating with the Client, EPC Contractor, laboratory, and quantity survey teams for quality control, measurements, documentation, and certification.",
+        "Verifying quantities and recommending EPC Contractor bills and interim payment certificates.",
+        "Monitoring project progress, resource utilization, and overall project performance to achieve timely completion within specified quality standards."
+      ]
+    },
+    {
+      "id": "i9-freeways",
+      "confirmed_in_original_cv": true,
+      "employer": "I-9 Freeways Private Limited",
+      "employer_location": "Panchkula, Haryana",
+      "start": "2023-08-01",
+      "end": "2025-11-10",
+      "is_current": false,
+      "title": "Project Manager",
+      "location": "Seoni & Katni (Madhya Pradesh)",
+      "client": "Madhya Pradesh Public Work Department",
+      "stated_project_value_text": "INR 170 Cr.",
+      "stated_value_cr": 170,
+      "projects": [
+        {
+          "id": "i9-seoni",
+          "name": "Construction of Bandol-Banki-Jamuniya-Sagar-Chandori-Marbori-Jam-Kanhargaon-Kohka Road",
+          "length_km": 42.287,
+          "contract_mode": "EPC",
+          "authority_division": "PWD (B/R) Division Seoni",
+          "state": "Madhya Pradesh"
+        },
+        {
+          "id": "i9-katni",
+          "name": "Construction of the Upgradation of Badgaon-Godana-Karahiya-Muhas Lalpur-Pali Road",
+          "length_km": 37.8,
+          "contract_mode": "EPC",
+          "authority_division": "PWD (B/R) Division Katni",
+          "state": "Madhya Pradesh"
+        }
+      ],
+      "responsibilities_verbatim": [
+        "Planning scheduling and financial scheduling as per the work program, Monitoring, arrange Construction material.",
+        "Site investigation, mobilization and organization of site activities.",
+        "Responsible for the overall execution of the project as per the contractual agreement.",
+        "Responsible for quality of work, standardization and making a good working environment and Team spirit in the project site.",
+        "Dealing with consultants and client, Coordinating with Laboratory and Quantity people certification and recording of quantities, verification of subcontractor's bills."
+      ]
+    },
+    {
+      "id": "tomar-builders",
+      "confirmed_in_original_cv": true,
+      "employer": "Tomar Builders & Contractors Private Limited",
+      "start": "2017-07-01",
+      "end": "2023-07-31",
+      "is_current": false,
+      "title": "Project Manager",
+      "location": "Bina (Madhya Pradesh)",
+      "client": "PWD Sagar, MP",
+      "stated_project_value_text": "INR 156 Cr.",
+      "stated_value_cr": 156,
+      "projects": [
+        {
+          "id": "tomar-nh26a",
+          "name": "Construction of widening of road to two lane with paved shoulders, including construction of bridges and culvert, Km 1 to 49/4 on NH-26A Sagar to Bina",
+          "road_ids": [
+            "NH-26A"
+          ],
+          "chainage": [
+            "Km 1 to Km 49/4"
+          ],
+          "length_km": 48.7,
+          "contract_mode": "EPC",
+          "structure_types": [
+            "Bridges",
+            "Culverts"
+          ],
+          "state": "Madhya Pradesh"
+        }
+      ],
+      "responsibilities_verbatim": [
+        "Preparation of Daily Progress Report, Monthly Progress Report etc.",
+        "Maintaining all records of construction activities and quantity estimation of work executed for preparation of progress report, further planning billing works.",
+        "Preparing drawings (Cross-Section, Curve and Junction Design) and taking approval from Consultant.",
+        "Preparation of working cross sections and quantity calculation.",
+        "Preparation of documents for final submission to client."
+      ]
+    },
+    {
+      "id": "raj-vilash-bhopal-sanchi",
+      "confirmed_in_original_cv": true,
+      "employer": "Raj Vilash Enterprises",
+      "start": "2013-04-01",
+      "end": "2017-06-30",
+      "is_current": false,
+      "title": "Project Manager",
+      "location": "Raisen (MP)",
+      "client": "NHAI",
+      "concessionaire": "M/s Bhopal Sanchi Highway Pvt. Ltd.",
+      "epc_contractor": "M/s Abhyudaya Housing & Construction Company Pvt. Ltd.",
+      "stated_project_value_text": "INR 209 Cr.",
+      "stated_value_cr": 209,
+      "projects": [
+        {
+          "id": "rv-bhopal-sanchi",
+          "name": "Two lane with paved shoulder of Bhopal-Sanchi section from Km 0.00 to Km 53.775 of NH-86 Extn, BOT (Annuity) project on DBFO pattern under NHDP Phase-III",
+          "road_ids": [
+            "NH-86 Extn"
+          ],
+          "chainage": [
+            "Km 0.00 to Km 53.775"
+          ],
+          "length_km": 53.775,
+          "contract_mode": "BOT (Annuity), DBFO, NHDP Phase-III",
+          "state": "Madhya Pradesh"
+        }
+      ],
+      "responsibilities_verbatim": [
+        "Monitoring of all construction activities in project.",
+        "Preparation of payment & certification of bill.",
+        "Monitoring the quality of work.",
+        "Procurement of material & maintaining the departmental correspondence and coordination with different agencies."
+      ]
+    },
+    {
+      "id": "raj-vilash-brts",
+      "confirmed_in_original_cv": true,
+      "employer": "Raj Vilash Enterprises",
+      "start": "2009-04-02",
+      "end": "2013-03-31",
+      "is_current": false,
+      "title": "Project Manager",
+      "location": "Bhopal (MP)",
+      "client": "BMC",
+      "contractors": "Ashoka Buildcon Ltd., Nashik",
+      "stated_project_value_text": "237 Cr.",
+      "stated_value_cr": 237,
+      "projects": [
+        {
+          "id": "rv-bhopal-brts",
+          "name": "Consultancy Services for \"Supervision and Quality Control for BRTS Project at Bhopal\"",
+          "contract_mode": "Supervision consultancy",
+          "state": "Madhya Pradesh",
+          "structure_types": [
+            "Road",
+            "Drain"
+          ]
+        }
+      ],
+      "responsibilities_verbatim": [
+        "Monitoring and checking of all construction activities in road & drain work.",
+        "Execution work with the contractor's execution team to achieve set targets."
+      ]
+    },
+    {
+      "id": "punj-lloyd-2006",
+      "confirmed_in_original_cv": true,
+      "employer": "Punj Lloyd Ltd.",
+      "start": "2006-02-01",
+      "end": "2009-03-31",
+      "is_current": false,
+      "title": "Sr. Engineer",
+      "location": "Baran (Rajasthan)",
+      "client": "RIDCORE (as written in CV)",
+      "stated_project_value_text": "108 Cr.",
+      "stated_value_cr": 108,
+      "projects": [
+        {
+          "id": "pl-baran-jhalawar",
+          "name": "Integrated improvement cum performance based maintenance of Baran to Jhalawar road (Km 0+000 to Km 78+000) on SH-19 in Rajasthan, LJ-2 Mega Highway",
+          "road_ids": [
+            "SH-19"
+          ],
+          "chainage": [
+            "Km 0+000 to Km 78+000"
+          ],
+          "length_km": 78,
+          "contract_mode": "Integrated improvement cum performance-based maintenance",
+          "state": "Rajasthan"
+        }
+      ],
+      "responsibilities_verbatim": [
+        "Road construction like Earthwork, Subgrade, GSB, WMM work as a section in charge."
+      ]
+    },
+    {
+      "id": "npcil",
+      "confirmed_in_original_cv": true,
+      "employer": "Nuclear Power Corporation of India Ltd.",
+      "start": "2004-10-01",
+      "end": "2006-01-31",
+      "is_current": false,
+      "title": "Site Engineer",
+      "location": "Rajasthan Atomic Power Project 5&6, Kota (Rajasthan)",
+      "main_contractors": [
+        "H.C.C.",
+        "L&T",
+        "Gammon"
+      ],
+      "stated_project_value_text": "INR 350 Cr.",
+      "stated_value_cr": 350,
+      "projects": [
+        {
+          "id": "npcil-rapp-5-6",
+          "name": "Rajasthan Atomic Power Project 5&6, Kota (Rajasthan), Reactor Building",
+          "state": "Rajasthan",
+          "structure_types": [
+            "Reactor Building",
+            "Prestressed inner containment wall",
+            "Dome"
+          ]
+        }
+      ],
+      "responsibilities_verbatim": [
+        "Monitoring and checking of all construction activities in Reactor Building.",
+        "Execution work with the contractor's execution team to achieve set targets.",
+        "Construction of prestressed inner containment wall & dome work."
+      ]
+    },
+    {
+      "id": "bcc-developers",
+      "confirmed_in_original_cv": true,
+      "employer": "BCC Developers & Promoters Pvt. Ltd.",
+      "start": "2004-03-01",
+      "end": "2004-09-30",
+      "is_current": false,
+      "title": "Site Engineer",
+      "location": "Rajasthan Atomic Power Project 5&6, Kota (Rajasthan)",
+      "client": "Nuclear Power Corporation Of India Ltd",
+      "stated_project_value_text": "INR 6 Cr.",
+      "stated_value_cr": 6,
+      "projects": [
+        {
+          "id": "bcc-400kv",
+          "name": "Construction of 400 KV Switch Yard",
+          "state": "Rajasthan"
+        }
+      ],
+      "responsibilities_verbatim": [
+        "Executing day to day construction activities for the construction of footing, tower foundation, retaining wall, cable trench etc.",
+        "Storing of materials.",
+        "Billing works."
+      ]
+    },
+    {
+      "id": "punj-lloyd-2001",
+      "confirmed_in_original_cv": true,
+      "employer": "Punj Lloyd Ltd.",
+      "start": "2001-01-01",
+      "end": "2004-02-28",
+      "is_current": false,
+      "title": "Junior Engineer (Project a); Site Engineer (Project b)",
+      "projects": [
+        {
+          "id": "pl-jaipur-bypass",
+          "label": "a",
+          "title": "Junior Engineer",
+          "name": "Construction of an access-controlled four-lane divided carriageway with six-lane structures of Jaipur Bypass-II, Zone-D (NHAI), Jaipur",
+          "state": "Rajasthan",
+          "client": "National Highway Authority of India Ltd.",
+          "stated_project_value_text": "INR 200 Cr",
+          "stated_value_cr": 200
+        },
+        {
+          "id": "pl-vadodara-halol",
+          "label": "b",
+          "title": "Site Engineer",
+          "name": "Widening and strengthening of existing two-lane into 4-lane tolled expressway connecting Vadodara-Halol section of State Highway (SH-87) in the State of Gujarat on BOT basis",
+          "road_ids": [
+            "SH-87"
+          ],
+          "state": "Gujarat",
+          "contract_mode": "BOT",
+          "client": "Vadodara-Halol Toll Road Ltd.",
+          "stated_project_value_text": "INR 161 Cr.",
+          "stated_value_cr": 161
+        }
+      ],
+      "responsibilities_verbatim": [
+        "Construction supervision of grade separated structure, underpasses, rcc & rrm retaining wall, box culverts, cattle crossing drain etc. including preparation of BBS and other related documentation required for billing and quality control at site."
+      ]
+    }
+  ],
+  "executive_positioning": {
+    "open_to": [
+      "Project Manager / Sr. Project Manager on large highway and infrastructure projects",
+      "Dy. General Manager / General Manager - Projects",
+      "Project Director",
+      "Employers: EPC contractors, BOT/HAM concessionaires, supervision and project-management consultancies"
+    ],
+    "executive_summary_draft": "Civil engineer with 25+ years in highway and infrastructure construction, progressing from Junior Engineer to Project Manager across NHAI, state PWD, MMRDA and nuclear-power civil works. Experience spans EPC, BOT (Annuity/DBFO) and BOT-toll delivery, supervision consultancy and performance-based maintenance, on projects with stated contract values from INR 6 Cr to INR 350 Cr. Hands-on in site execution, quality assurance, quantity verification, bill certification and MoRTH/IRC compliance, with a Road Safety Audit certification.",
+    "core_competencies_grouped": {
+      "Project delivery": [
+        "Planning and scheduling",
+        "Financial scheduling",
+        "Site investigation and mobilization",
+        "Construction supervision and execution",
+        "Progress reporting (DPR / MPR)"
+      ],
+      "Quality and safety": [
+        "QA / QC",
+        "Material and laboratory coordination",
+        "MoRTH / IRC compliance",
+        "Road Safety Audit"
+      ],
+      "Contracts and commercial": [
+        "Quantity verification",
+        "Interim payment certificates and bill certification",
+        "Subcontractor bill verification",
+        "Material procurement",
+        "Consultant and client coordination"
+      ],
+      "Structures and works": [
+        "Highways and bridges",
+        "Flyovers and underpasses",
+        "RCC and RRM retaining walls, box culverts",
+        "Prestressed containment wall and dome",
+        "Earthwork, subgrade, GSB, WMM"
+      ],
+      "Delivery models": [
+        "EPC",
+        "BOT (Annuity) / DBFO",
+        "BOT toll",
+        "Design and Construction",
+        "Performance-based maintenance",
+        "Supervision consultancy"
+      ]
+    },
+    "derived_numbers_compute_at_build": {
+      "cumulative_stated_contract_value_cr_original_cv": 1597,
+      "employers_original_cv": 6,
+      "employers_with_ekam": 7,
+      "employment_entries_original_cv": 8,
+      "states_worked": [
+        "Rajasthan",
+        "Gujarat",
+        "Madhya Pradesh",
+        "Maharashtra"
+      ],
+      "clients": [
+        "NHAI",
+        "NPCIL",
+        "MP PWD",
+        "RIDCOR/RIDCORE",
+        "PWD Maharashtra",
+        "MMRDA",
+        "Bhopal Municipal Corporation (BMC)",
+        "Vadodara-Halol Toll Road Ltd."
+      ],
+      "states_unconfirmed": [
+        "Maharashtra"
+      ],
+      "clients_unconfirmed": [
+        "PWD Maharashtra",
+        "MMRDA"
+      ]
+    }
+  },
+  "executive_slots_empty_until_candidate_supplies": {
+    "leadership_scope": {
+      "peak_team_size": null,
+      "direct_reports": null,
+      "subcontractors_managed": null,
+      "monthly_billing_cr": null,
+      "sites_handled_concurrently": null
+    },
+    "quantified_results": [],
+    "case_studies": [],
+    "awards": [],
+    "recommendations": [],
+    "availability": {
+      "notice_period": null,
+      "relocation": null,
+      "open_to_international": null
+    },
+    "software_and_tools": [],
+    "additional_certifications": []
+  },
+  "version": 2
+}

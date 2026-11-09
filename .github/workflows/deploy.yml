@@ -1,0 +1,64 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  NEXT_PUBLIC_BASE_PATH: /CV-portfolio
+  NEXT_PUBLIC_SITE_URL: https://shivanshu9799.github.io/CV-portfolio
+  # Repo variable ALLOW_INDEXING=true turns on search indexing. Default: noindex.
+  NEXT_PUBLIC_ALLOW_INDEXING: ${{ vars.ALLOW_INDEXING }}
+  NEXT_PUBLIC_SHOW_UNCONFIRMED: ${{ vars.SHOW_UNCONFIRMED }}
+  NEXT_PUBLIC_FORM_ENDPOINT: ${{ vars.FORM_ENDPOINT }}
+  # Contact details live in a repository secret, never in the repo.
+  CONTACT_JSON: ${{ secrets.CONTACT_JSON }}
+  PRIVATE_JSON: ${{ secrets.PRIVATE_JSON }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+      - name: Warn if contact secret is missing
+        run: |
+          if [ -z "$CONTACT_JSON" ]; then echo "::warning::CONTACT_JSON secret is empty: the Contact page will show no email or phone."; fi
+      - uses: actions/configure-pages@v5
+      - run: pnpm build
+      - name: Gates (private data, unsupported claims)
+        run: pnpm gates
+      - run: touch out/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

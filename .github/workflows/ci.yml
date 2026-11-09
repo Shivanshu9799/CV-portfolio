@@ -1,0 +1,35 @@
+name: CI (browser tests)
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+env:
+  NEXT_PUBLIC_BASE_PATH: ''
+  CONTACT_JSON: ${{ secrets.CONTACT_JSON }}
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint && pnpm typecheck && pnpm test
+      - run: pnpm build
+      - run: pnpm gates
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm e2e
+      - name: Lighthouse
+        run: pnpm exec lhci autorun
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: out
+          path: out

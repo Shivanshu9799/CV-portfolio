@@ -1,0 +1,18 @@
+# dependencies and build output
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# PRIVATE: never commit (repo is public on GitHub)
+content/*.local.json
+.env
+.env.*
+!.env.example
+
+# test artefacts
+test-results/
+playwright-report/
+.lighthouseci/
+coverage/

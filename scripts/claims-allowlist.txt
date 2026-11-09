@@ -1,0 +1,2 @@
+# Reviewed exceptions for scripts/claims-lint.ts. One literal per line (a word or a number). Lines starting with # are comments.
+# Keep this list short and explain each entry in a comment.

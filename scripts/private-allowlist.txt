@@ -1,0 +1,2 @@
+# Reviewed exceptions for scripts/check-private-strings.ts. One literal per line.
+# Example: a library string that looks like an email but is not contact data.
